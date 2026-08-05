@@ -23,7 +23,7 @@ import {
   LayoutDashboard,
   Globe,
 } from "lucide-react";
-import profileImg from "@/assets/profile.jpg.asset.json";
+import image from "@/assets/image.jpeg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -171,8 +171,8 @@ function Index() {
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brand to-indigo-400 opacity-20 blur-2xl" />
               <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-brand to-indigo-500 opacity-70" />
               <img
-                src={profileImg.url}
-                alt="Yerrajonnala Bhavyasree"
+                src={image}
+                alt="Bhavyasree"
                 width={1024}
                 height={1024}
                 className="relative w-64 sm:w-80 md:w-[22rem] aspect-square rounded-[2rem] object-cover shadow-2xl shadow-brand/20 animate-float"
