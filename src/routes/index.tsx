@@ -1,3 +1,4 @@
+
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
@@ -197,16 +198,16 @@ function Index() {
       </section>
 
       {/* About */}
-      <Section id="about" eyebrow="About Me" title="A quick introduction">
+      <Section id="about" eyebrow="About Me" title="Introduction">
         <div className="grid md:grid-cols-5 gap-8">
-          <p className="md:col-span-3 text-slate-600 leading-relaxed">
-            Computer Science and Engineering student passionate about Machine Learning, Artificial
-            Intelligence, and emerging technologies. Proficient in Python, data analysis, and
-            implementing machine learning algorithms to solve real-world problems. Strong
-            problem-solving and analytical skills with experience working in collaborative
-            environments. Eager to develop innovative, data-driven solutions while contributing to
-            organizational growth — seeking opportunities to apply my knowledge and gain practical
-            experience in the IT and AI/ML domains.
+            <p className="md:col-span-3 text-slate-600 leading-relaxed text-justify">
+            Computer Science and Engineering graduate specializing in Artificial Intelligence, 
+            with hands-on experience in Machine Learning, Generative AI, and Python-based application development.
+            Skilled in data analysis, machine learning algorithms, and building AI-driven solutions 
+            using Python, Pandas, NumPy, Scikit-learn, LLMs, RAG, and LangChain. 
+            Experienced in developing practical projects involving predictive modeling, intelligent recruitment systems, and data-driven applications.
+             Seeking an opportunity to contribute to real-world AI/ML and software development projects 
+             while growing as an engineer and delivering impactful technology solutions..
           </p>
           <div className="md:col-span-2 grid grid-cols-2 gap-4">
             {[
@@ -271,14 +272,36 @@ function Index() {
               </div>
               <div className="mt-4 inline-flex items-center gap-2 text-sm">
                 <span className="rounded-lg bg-slate-50 px-3 py-1 text-slate-700 font-medium">
-                  CGPA: <span className="text-brand font-bold">9.69</span>
+                  Percentage: <span className="text-brand font-bold">96.9%</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* 10th Class */}
+          <div className="relative">
+            <div className="absolute -left-[38px] top-2 h-4 w-4 rounded-full bg-brand ring-4 ring-brand/20" />
+            <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-lg transition-all">
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 className="font-display font-semibold text-lg text-slate-900">
+                    SSC – Board of Secondary Education, Andhra Pradesh
+                  </h3>
+                  <p className="text-slate-600 mt-1">Indus English Medium School</p>
+                </div>
+                <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">
+                  2022
+                </span>
+              </div>
+              <div className="mt-4 inline-flex items-center gap-2 text-sm">
+                <span className="rounded-lg bg-slate-50 px-3 py-1 text-slate-700 font-medium">
+                  Percentage: <span className="text-brand font-bold">95.6%</span>
                 </span>
               </div>
             </div>
           </div>
         </div>
       </Section>
-
 
       {/* Experience */}
       <Section id="experience" eyebrow="Experience" title="Internship experience">
@@ -296,7 +319,7 @@ function Index() {
               </div>
             </div>
             <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">
-              Internship
+              May 2024 - June 2024
             </span>
           </div>
           <ul className="mt-6 grid md:grid-cols-2 gap-x-8 gap-y-3 text-sm text-slate-600">
@@ -316,6 +339,41 @@ function Index() {
             ))}
           </ul>
         </div>
+
+        {/* Second Internship */}
+        <div className="mt-6 rounded-2xl border border-slate-100 bg-white p-6 md:p-8 shadow-sm hover:shadow-lg transition-all">
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div className="flex items-start gap-4">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-soft text-brand">
+                <Briefcase size={22} />
+              </div>
+              <div>
+                <h3 className="font-display font-semibold text-lg text-slate-900">
+                  AI Software Engineer 
+                </h3>
+                <p className="text-slate-600">Worksbot</p>
+              </div>
+            </div>
+            <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">
+              June 2026 – September 2026
+            </span>
+          </div>
+          <ul className="mt-6 grid md:grid-cols-2 gap-x-8 gap-y-3 text-sm text-slate-600">
+            {[
+              "Worked on an AI-powered Recruitment & Talent Intelligence Platform.",
+              "Developed application features using Next.js, FastAPI, Python and PostgreSQL.",
+              "Built and integrated REST APIs for recruiter and candidate workflows.",
+              "Implemented resume screening, candidate profiling and job-matching features.",
+              "Worked with semantic search, RAG and LLM-based recommendations using LangChain and Groq API.",
+              "Contributed to authentication, recruiter dashboards and application management.",
+            ].map((b) => (
+              <li key={b} className="flex gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
+                {b}
+              </li>
+            ))}
+          </ul>
+        </div>
       </Section>
 
       {/* Skills */}
@@ -323,9 +381,10 @@ function Index() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
             { icon: Code2, title: "Programming", items: ["Python", "Java"] },
-            { icon: Brain, title: "Machine Learning", items: ["Scikit-learn", "Pandas", "NumPy"] },
-            { icon: Layout, title: "Web Development", items: ["HTML", "CSS", "Streamlit"] },
-            { icon: Database, title: "Database", items: ["MySQL"] },
+            { icon: Brain, title: "Data Analysis", items: ["Pandas", "NumPy", "Scikit-learn", "NLP"] },
+            { icon: Layout, title: "Web Development", items: ["HTML", "CSS", "JavaScript", "FastAPI"] },
+            { icon: Database, title: "Database", items: ["SQL", "PostgreSQL"] },
+            {icon: Sparkles,title: "Generative AI",items: ["LLMs", "RAG", "LangChain", "Prompt Engineering"],},
             { icon: Wrench, title: "Tools", items: ["Git", "GitHub", "VS Code"] },
             {
               icon: Users,
@@ -405,7 +464,7 @@ function Index() {
             {
               title: "Wealth Vista — Expense Tracker",
               desc: "Responsive frontend for a personal finance app to track daily expenses, manage categories and set financial goals. Focused on clean UI/UX for usability and accessibility.",
-              tech: ["HTML", "CSS"],
+              tech: ["HTML", "CSS", "JavaScript"],
               gradient: "from-blue-500 to-indigo-500",
               icon: BarChart3,
             },
@@ -584,4 +643,3 @@ function Section({
     </section>
   );
 }
-
